@@ -1,0 +1,234 @@
+.wrapper{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0, .5);
+    padding: 7px;
+    margin-top: 20px;
+    position: relative;
+}
+.head{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    &__left{
+        display: flex;
+        align-items: flex-end;
+    }
+    &__left_ava{
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: rgb(201, 201, 201);
+        border-radius: 50%;
+    }
+    &__left_name{
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 8px;
+    }
+    &__right{
+        display: flex;
+        align-items: flex-end;
+    }
+    &__right_date{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 8px;
+    }
+}
+.text{
+    padding: 10px 7px 7px 40px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    font-weight: 400;
+    white-space: pre-wrap;
+    &__btn{
+        display: inline-block;
+        color: #77a0c9;
+        text-decoration: underline;
+        background-color: rgb(0, 0, 0, 0);
+    }
+}
+.more{
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0);
+    transform: rotate(90deg);
+    top: 48px;
+    left: 13px;
+    &__layout{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+}
+.delete{
+    width: 200px;
+    height: 35px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, .25);
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 5px 5px 5px;
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    z-index: 1;
+}
+
+
+
+@media (max-width: 1100px){
+    .wrapper{
+        padding: 5px;
+        margin-top: 16px;
+    }
+    .head{
+        &__left_ava{
+            width: 26px;
+            height: 26px;
+        }
+        &__left_name{
+            font-size: 13px;
+            margin-left: 8px;
+        }
+        &__right_date{
+            font-size: 12px;
+            margin-right: 6px;
+        }
+        &__right_star{
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .text{
+        padding: 8px 6px 6px 30px;
+        font-size: 12px;
+        &__btn{
+            font-size: 12px;
+        }
+    }
+    .more{
+        top: 38px;
+        left: 11px;
+        &__icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .delete{
+        width: 200px;
+        height: 35px;
+        top: 70px;
+        left: 40px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .wrapper{
+        width: 100%;
+        padding: 7px;
+        margin-top: 20px;
+    }
+    .head{
+        &__left_ava{
+            width: 30px;
+            height: 30px;
+        }
+        &__left_name{
+            font-size: 15px;
+            margin-left: 8px;
+        }
+        &__right_date{
+            font-size: 14px;
+            margin-right: 8px;
+        }
+    }
+    .text{
+        padding: 10px 7px 7px 40px;
+        font-size: 14px;
+    }
+    .more{
+        top: 48px;
+        left: 13px;
+        &__icon{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .delete{
+        width: 200px;
+        height: 35px;
+        top: 70px;
+        left: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .wrapper{
+        padding: 5px;
+        margin-top: 16px;
+    }
+    .head{
+        &__left_ava{
+            width: 26px;
+            height: 26px;
+        }
+        &__left_name{
+            font-size: 13px;
+            margin-left: 8px;
+        }
+        &__right_date{
+            font-size: 12px;
+            margin-right: 6px;
+        }
+        &__right_star{
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .text{
+        padding: 8px 6px 6px 30px;
+        font-size: 12px;
+        &__btn{
+            font-size: 12px;
+        }
+    }
+    .more{
+        top: 38px;
+        left: 11px;
+        &__icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .delete{
+        width: 200px;
+        height: 35px;
+        top: 60px;
+        left: 28px;
+    }
+}
+
+
+@media (max-width: 460px) {
+    .delete{
+        width: 150px;
+        height: 25px;
+        top: 60px;
+        left: 28px;
+        font-size: 12px;
+    }
+}
+
+.hidden{
+    display: none;
+}

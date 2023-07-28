@@ -1,0 +1,436 @@
+.header{
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.banner{
+    margin-top: 40px;
+}
+.container{
+    width: 1300px;
+    position: relative;
+    left: calc(50% - 650px);
+    padding-bottom: 100px;
+}
+.courses{
+    margin-top: 50px;
+    &__search{
+        margin-top: 24px;
+    }
+    &__cards{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 280px;
+        grid-auto-rows: 280px;
+        place-items: center;
+    }
+    &__add{
+        width: 400px;
+        min-height: 250px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px rgb(0, 0, 0, .5);
+        background-color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 24px;
+        font-weight: 600;
+        color: rgb(0, 0, 0, .5);
+    }
+}
+.info{
+    margin-top: 50px;
+    position: relative;
+    &__edit{
+        width: 48px;
+        height: 48px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px rgb(0, 0, 0, .5);
+        position: absolute;
+        top: 10px;
+        left: 380px;
+    }
+    &__items{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__pict{
+        width: 380px;
+        height: 380px;
+        background-color: rgb(187, 187, 187);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px rgb(0, 0, 0, .2);
+        border-radius: 5px;
+    }
+}
+.resources{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    &__edit{
+        width: 48px;
+        height: 48px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px rgb(0, 0, 0, .5);
+        position: absolute;
+        top: 10px;
+        left: 230px;
+    }
+    &__nav{
+        width: 420px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        left: calc(50% - 210px);
+        top: 0px;
+    }
+    &__nav_btn1{
+        background-color: rgb(0, 0, 0, 0.25);
+        border-radius: 50%;
+        transform: rotate(90deg);
+        position: relative;
+        z-index: 1;
+        transition-duration: 250ms;
+    }
+    &__nav_btn2{
+        background-color: rgb(0, 0, 0, 0.25);
+        border-radius: 50%;
+        transform: rotate(-90deg);
+        position: relative;
+        z-index: 1;
+        transition-duration: 250ms;
+    }
+    &__nav_notActive{
+        background-color: rgb(0, 0, 0, 0.10);
+    }
+    &__nav_themes_wrapper{
+        width: 250px;
+        overflow: hidden;
+    }
+    &__nav_themes{
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 0px;
+        transition-duration: 250ms;
+    }
+    &__nav_theme{
+        min-width: 250px;
+        font-size: 28px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+    }
+    &__content_wrapper{
+        overflow: hidden;
+        margin-top: 0px;
+        padding-bottom: 20px;
+    }
+    &__content{
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        transition-duration: 250ms;
+    }
+    &__list{
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 15px;
+    }
+    &__add{
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px rgb(0, 0, 0, .5);
+        width: 47px;
+        height: 47px;
+        position: absolute;
+        top: 10px;
+        left: 300px;
+    }
+}
+.hide{
+    display: none;
+}
+
+
+
+@media (max-width: 1400px) {
+    .banner{
+        margin-top: 30px;
+    }
+    .container{
+        width: 1100px;
+        left: calc(50% - 550px);
+    }
+    .courses{
+        margin-top: 30px;
+        &__search{
+            margin-top: 24px;
+        }
+        &__cards{
+            margin-top: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 230px;
+            grid-auto-rows: 230px;
+        }
+        &__add{
+            display: none;
+        }
+    }
+    .info{
+        margin-top: 30px;
+        position: relative;
+        &__edit{
+            display: none;
+        }
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+        }
+        &__pict{
+            width: calc(100% - 30px);
+            height: 100%;
+            aspect-ratio: 1 / 1;
+        }
+    }
+    .resources{
+        margin-top: 40px;
+        position: relative;
+        width: 100%;
+        &__edit{
+            display: none;
+        }
+        &__nav{
+            width: 350px;
+            left: calc(50% - 175px);
+        }
+        &__nav_themes_wrapper{
+            width: 200px;
+            overflow: hidden;
+        }
+        &__nav_theme{
+            min-width: 200px;
+            font-size: 24px;
+        }
+        &__content_wrapper{
+            padding-bottom: 10px;
+        }
+        &__list{
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-left: 10px;
+        }
+        &__add{
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .banner{
+        margin-top: 20px;
+    }
+    .container{
+        width: 750px;
+        left: calc(50% - 375px);
+    }
+    .courses{
+        margin-top: 20px;
+        &__search{
+            margin-top: 14px;
+        }
+        &__cards{
+            margin-top: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 170px;
+            grid-auto-rows: 170px;
+        }
+        &__add{
+            display: none;
+        }
+    }
+    .info{
+        margin-top: 20px;
+        position: relative;
+        &__edit{
+            display: none;
+        }
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            margin-top: 15px;
+        }
+        &__pict{
+            width: calc(100% - 20px);
+            height: 100%;
+            aspect-ratio: 1 / 1;
+        }
+    }
+    .resources{
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        &__edit{
+            display: none;
+        }
+        &__nav{
+            width: 250px;
+            left: calc(50% - 125px);
+        }
+        &__nav_arr{
+            width: 25px;
+            height: 25px;
+        }
+        &__nav_themes_wrapper{
+            width: 150px;
+            overflow: hidden;
+        }
+        &__nav_theme{
+            min-width: 150px;
+            font-size: 20px;
+        }
+        &__list{
+            padding-left: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .banner{
+        margin-top: 15px;
+    }
+    .container{
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+    .courses{
+        margin-top: 15px;
+        &__search{
+            margin-top: 10px;
+        }
+        &__cards{
+            margin-top: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 170px;
+            grid-auto-rows: 170px;
+        }
+        &__add{
+            display: none;
+        }
+    }
+    .info{
+        margin-top: 10px;
+        position: relative;
+        &__edit{
+            display: none;
+        }
+        &__items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            margin-top: 10px;
+        }
+        &__pict{
+            width: calc(100% - 20px);
+            height: 100%;
+            aspect-ratio: 1 / 1;
+        }
+    }
+    .resources{
+        margin-top: 15px;
+        position: relative;
+        width: 100%;
+        &__edit{
+            display: none;
+        }
+        &__nav{
+            width: 200px;
+            left: calc(50% - 100px);
+        }
+        &__nav_arr{
+            width: 20px;
+            height: 20px;
+        }
+        &__nav_themes_wrapper{
+            width: 120px;
+            overflow: hidden;
+        }
+        &__nav_theme{
+            min-width: 120px;
+            font-size: 15px;
+        }
+        &__list{
+            padding-left: 5px;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+@media (max-width: 550px) {
+    .banner{
+        margin-top: 10px;
+    }
+    .container{
+        width: calc(100% - 30px);
+        left: 15px;
+    }
+    .courses{
+        margin-top: 10px;
+        &__search{
+            margin-top: 10px;
+        }
+        &__cards{
+            margin-top: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 180px;
+            grid-auto-rows: 180px;
+        }
+        &__add{
+            display: none;
+        }
+    }
+    .info{
+        margin-top: 10px;
+        position: relative;
+        &__edit{
+            display: none;
+        }
+        &__items{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        &__pict{
+            max-width: 70%;
+            max-height: 70vw;
+            margin-bottom: 15px;
+            box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.25);
+        }
+    }
+    .resources{
+        margin-top: 0px;
+        &__nav{
+            margin-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.wrapper{
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1400px) {
+    .wrapper{
+        font-size: 35px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .image{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .wrapper{
+        font-size: 25px;
+    }
+    .image{
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .wrapper{
+        font-size: 20px;
+    }
+    .image{
+        width: 18px;
+        height: 18px;
+    }
+}

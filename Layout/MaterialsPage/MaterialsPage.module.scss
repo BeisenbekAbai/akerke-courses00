@@ -1,0 +1,460 @@
+.header{
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.wrapper{
+    width: 1000px;
+    position: relative;
+    left: calc(50% - 500px);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    width: 600px;
+    padding-bottom: 200px;
+}
+.video{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+.lessonName{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.desc{
+    margin-top: 30px;
+    padding: 16px 30px;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0, .5);
+    border-radius: 5px;
+    &__text{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+    &__btn{
+        display: inline-block;
+        color: #0d6efd;
+        text-decoration: underline;
+        background-color: rgb(0, 0, 0, 0);
+    }
+}
+.resources{
+    margin-top: 10px;
+    &__wrapper{
+        margin-top: 30px;
+    }
+    &__text{
+        border-radius: 5px;
+        background: #FFF;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+        padding: 16px 21px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+}
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    &__btn{
+        width: 180px;
+        height: 40px;
+        border-radius: 5px;
+        background: rgba(46, 46, 46, 0.80);
+        color: white;
+        font-size: 16px;
+        font-weight: 600px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__btn1{
+        padding-left: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__btn2{
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__btn3{
+        justify-content: center;
+        background-color: var(--gray);
+    }
+    &__btn_active{
+        border: 2px solid var(--gray);
+        background-color: rgb(0, 0, 0, 0);
+        color: black;
+        font-weight: 600;
+    }
+    &__active{
+        background-color: var(--gray);
+    }
+    &__arr1{
+        transform: rotate(90deg);
+        left: 0px;
+    }
+    &__arr2{
+        transform: rotate(-90deg);
+        right: 0px;
+    }
+}
+.matlist{
+    width: 100%;
+    max-height: fit-content;
+    overflow: overlay;
+    max-height: calc(100% - 40px);
+    &__wrapper2{
+        display: none;
+    }
+    &__wrapper{
+        width: 350px;
+        border-radius: 5px;
+        border: 2px solid var(--gray);
+        height: calc(100vh - 160px);
+        position: sticky;
+        top: 110px;
+    }
+    &__head{
+        width: 100%;
+        height: 40px;
+        background-color: var(--gray);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__opt{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    &__checkbox{
+        margin-top: 3px;
+        max-width: 20px;
+        max-height: 20px;
+        min-width: 20px;
+        min-height: 20px;
+        border-radius: 5px;
+        border: 1px solid var(--gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+    &__title{
+        display: flex;
+        align-items: flex-start;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    &__title_num{
+        margin: 0px 6px 0px 10px;
+    }
+    &__opt_active{
+        background-color: rgb(209, 209, 209);
+    }
+}
+.matlist::-webkit-scrollbar {
+    width: 10px;
+}
+.matlist::-webkit-scrollbar-track {
+	background-color: rgb(0, 0, 0, 0);
+}
+.matlist::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 5px;
+}
+
+
+
+@media (max-width: 1050px) {
+    .wrapper{
+        width: 800px;
+        left: calc(50% - 400px);
+        margin-top: 30px;
+    }
+    .container{
+        width: 450px;
+        padding-bottom: 200px;
+    }
+    .lessonName{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .desc{
+        margin-top: 20px;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+        &__text{
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 5px;
+        }
+    }
+    .resources{
+        margin-top: 10px;
+        &__wrapper{
+            margin-top: 30px;
+        }
+        &__text{
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+            padding: 10px 20px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    .nav{
+        margin-top: 20px;
+        &__btn{
+            width: 140px;
+            height: 30px;
+            font-size: 13px;
+        }
+        &__btn1{
+            padding-left: 0px;
+        }
+        &__btn2{
+            padding-left: 13px;
+        }
+        &__btn3{
+            justify-content: center;
+            background-color: var(--gray);
+        }
+        &__btn_active{
+            border: 2px solid var(--gray);
+            background-color: rgb(0, 0, 0, 0);
+            color: black;
+            font-weight: 600;
+        }
+        &__icon{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .matlist{
+        &__wrapper{
+            width: 300px;
+            border-radius: 5px;
+            max-height: calc(100vh - 160px);
+            top: 90px;
+        }
+        &__head{
+            height: 35px;
+            font-size: 16px;
+        }
+        &__opt{
+            padding: 8px;
+        }
+        &__checkbox{
+            margin-top: 3px;
+            max-width: 16px;
+            max-height: 16px;
+            min-width: 16px;
+            min-height: 16px;
+        }
+        &__title{
+            font-size: 14px;
+        }
+        &__title_num{
+            margin: 0px 6px 0px 10px;
+            font-size: 16px;
+        }
+        &__icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .matlist{
+        &__wrapper{
+            width: 300px;
+            border-radius: 5px;
+            max-height: calc(100vh - 120px);
+            top: 60px;
+        }
+        &__head{
+            height: 35px;
+            font-size: 16px;
+        }
+        &__opt{
+            padding: 8px;
+        }
+        &__checkbox{
+            margin-top: 3px;
+            max-width: 16px;
+            max-height: 16px;
+            min-width: 16px;
+            min-height: 16px;
+        }
+        &__title{
+            font-size: 14px;
+        }
+        &__title_num{
+            margin: 0px 6px 0px 10px;
+            font-size: 16px;
+        }
+        &__icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+
+@media (max-width: 850px) {
+    .wrapper{
+        width: calc(100% - 60px);
+        left: 30px;
+        margin-top: 20px;
+    }
+    .container{
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    .matlist{
+        &__wrapper{
+            display: none;
+        }
+        &__wrapper2{
+            display: block;
+            width: 100%;
+            border-radius: 5px;
+            border: 2px solid var(--gray);
+            height: 500px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .container{
+        padding-bottom: 100px;
+    }
+    .lessonName{
+        font-size: 14px;
+        margin-top: 0px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .desc{
+        margin-top: 15px;
+        padding: 6px 15px;
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+        &__text{
+            font-size: 12px;
+            line-height: 17px;
+            margin-top: 3px;
+        }
+    }
+    .resources{
+        margin-top: 10px;
+        &__wrapper{
+            margin-top: 20px;
+        }
+        &__text{
+            box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+            padding: 6px 15px;
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 10px;
+        }
+    }
+    .nav{
+        margin-top: 20px;
+        &__btn{
+            width: 100px;
+            height: 30px;
+            font-size: 10px;
+        }
+        &__btn1{
+            padding-left: 0px;
+        }
+        &__btn2{
+            padding-left: 6px;
+        }
+        &__btn3{
+            justify-content: center;
+            background-color: var(--gray);
+        }
+        &__btn_active{
+            border: 2px solid var(--gray);
+            background-color: rgb(0, 0, 0, 0);
+            color: black;
+            font-weight: 600;
+        }
+        &__icon{
+            width: 14px;
+            height: 14px;
+        }
+    }
+    .matlist{
+        overflow-y: scroll;
+        max-height: fit-content;
+        overflow: overlay;
+        max-height: calc(100% - 40px);
+        &__head{
+            height: 35px;
+            font-size: 14px;
+        }
+        &__opt{
+            padding: 8px;
+        }
+        &__checkbox{
+            margin-top: 0px;
+            max-width: 16px;
+            max-height: 16px;
+            min-width: 16px;
+            min-height: 16px;
+        }
+        &__title{
+            font-size: 12px;
+        }
+        &__title_num{
+            margin: 0px 4px 0px 6px;
+            font-size: 12px;
+        }
+        &__icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .matlist::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+
+.hide{
+    display: none;
+}

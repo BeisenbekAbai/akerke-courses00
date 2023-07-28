@@ -1,0 +1,921 @@
+.header{
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.wrapper{
+    display: flex;
+    width: 1200px;
+    position: relative;
+    left: calc(50% - 600px);
+    margin-top: 50px;
+    justify-content: space-between;
+    padding-bottom: 200px;
+}
+.left{
+    width: 400px;
+}
+.image{
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0, .5);
+}
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.subscribe{
+    width: 180px;
+    height: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    &__active{
+        background-color: white;
+        border: 2px solid var(--gray);
+        color: black;
+    }
+}
+.gotobtn{
+    width: 180px;
+    height: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.reviews{
+    margin-top: 40px;
+    &__rating{
+        display: flex;
+        align-items: center;
+        margin-top: -10px;
+    }
+    &__rating_text{
+        font-size: 40px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+    &__count{
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: -5px;
+    }
+    &__list{
+        width: 100%;
+    }
+    &__buttons{
+        margin-top: 20px;
+        display: flex;
+    }
+    &__buttons_more{
+        width: 140px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        border: 1px solid var(--gray);
+        background-color: white;
+        margin-right: 20px;
+    }
+    &__buttons_add{
+        width: 140px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        color: white;
+        background-color: var(--gray);
+    }
+}
+.reviews2{
+    display: none;
+}
+.right{
+    width: 700px;
+}
+.name{
+    width: 100%;
+    height: 60px;
+    background-color: var(--gray);
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name2{
+    display: none;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.about{
+    width: 100%;
+    margin-top: 30px;
+    &__text{
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 20px;
+        border-left: 4px solid var(--gray);
+    }
+}
+.skills{
+    margin-top: 40px;
+    width: 100%;
+    &__box{
+        width: 100%;
+        border: 2px solid #CFCFCF;
+        border-radius: 5px;
+        padding: 15px 20px 0px 20px;
+    }
+    &__opt{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    &__opt_text{
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+}
+.materials{
+    margin-top: 40px;
+    &__head{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__head_icon{
+        margin-right: 4px;
+    }
+    &__head_red{
+        color: #FF3D00;
+        margin-right: 6px;
+    }
+    &__head_black{
+        margin-right: 6px;
+    }
+    &__head_line{
+        margin: 0px 15px 0px 9px;
+        font-size: 24px;
+    }
+    &__title{
+        color: rgba(0, 0, 0, 0.60);
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    &__video{
+        margin-top: 10px;
+    }
+}
+.teacher{
+    margin-top: 40px;
+    &__profile{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    &__ava{
+        min-width: 180px;
+        max-width: 180px;
+        height: 180px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: rgb(201, 201, 201);
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    &__short{
+        white-space: pre-wrap;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &__long{
+        white-space: pre-wrap;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    &__black{
+        white-space: pre-wrap;
+    }
+    &__blue{
+        white-space: pre-wrap;
+        color: #008cff;
+    }
+    &__red{
+        white-space: pre-wrap;
+        color: #FF3D00;
+    }
+    &__yellow{
+        white-space: pre-wrap;
+        color: #ff9500;
+    }
+}
+.image2{
+    display: none;
+}
+.about2{
+    display: none;
+}
+.buttons2{
+    display: none;
+}
+
+
+
+@media (max-width: 1300px){
+    .wrapper{
+        width: 1000px;
+        left: calc(50% - 500px);
+    }
+    .right{
+        width: 500px;
+    }
+}
+
+
+@media (max-width: 1100px){
+    .wrapper{
+        width: 800px;
+        left: calc(50% - 400px);
+    }
+    .left{
+        width: 320px;
+    }
+    .image{
+        width: 320px;
+        height: 320px;
+    }
+    .buttons{
+        margin-top: 14px;
+    }
+    .subscribe{
+        width: 150px;
+        height: 34px;
+        font-size: 14px;
+    }
+    .gotobtn{
+        width: 150px;
+        height: 34px;
+        font-size: 14px;
+    }
+    .reviews{
+        margin-top: 30px;
+        &__rating{
+            margin-top: -10px;
+        }
+        &__rating_star{
+            width: 30px;
+            height: 30px;
+        }
+        &__rating_text{
+            font-size: 30px;
+        }
+        &__count{
+            font-size: 14px;
+        }
+        &__list{
+            width: 100%;
+        }
+        &__buttons{
+            margin-top: 16px;
+            display: flex;
+        }
+        &__buttons_more{
+            width: 120px;
+            height: 24px;
+            margin-right: 16px;
+            font-size: 12px;
+        }
+        &__buttons_add{
+            width: 120px;
+            height: 24px;
+            margin-right: 16px;
+            font-size: 12px;
+        }
+    }
+    .right{
+        width: 400px;
+    }
+    .name{
+        height: 50px;
+        font-size: 18px;
+    }
+    .title{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .about{
+        width: 100%;
+        margin-top: 20px;
+        &__text{
+            font-size: 14px;
+            padding-left: 16px;
+        }
+    }
+    .skills{
+        margin-top: 30px;
+        width: 100%;
+        &__box{
+            border-radius: 5px;
+            padding: 10px 15px 0px 15px;
+        }
+        &__opt{
+            margin-bottom: 10px;
+        }
+        &__opt_text{
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+    .materials{
+        margin-top: 30px;
+        &__head{
+            font-size: 18px;
+        }
+        &__head_icon{
+            margin-right: 0px;
+        }
+        &__head_red{
+            color: #FF3D00;
+            margin-right: 4px;
+        }
+        &__head_black{
+            margin-right: 4px;
+        }
+        &__head_line{
+            margin: 0px 10px 0px 4px;
+            font-size: 20px;
+        }
+        &__title{
+            font-size: 17px;
+            margin-top: 16px;
+        }
+    }
+    .teacher{
+        margin-top: 30px;
+        &__profile{
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+        &__ava{
+            min-width: 150px;
+            max-width: 150px;
+            height: 150px;
+        }
+        &__short{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__long{
+            font-size: 14px;
+            margin-top: 18px;
+            line-height: 18px;
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .wrapper{
+        display: block;
+        width: 500px;
+        left: calc(50% - 250px);
+        margin-top: 30px;
+        padding-bottom: 120px;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .name{
+        display: none;
+    }
+    .name2{
+        width: 100%;
+        height: 40px;
+        background-color: var(--gray);
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .mobileVers{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .image{
+        display: none;
+    }
+    .image2{
+        display: block;
+        min-width: 150px;
+        min-height: 150px;
+        max-width: 150px;
+        max-height: 150px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: rgb(201, 201, 201);
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px rgb(0, 0, 0, .5);
+    }
+    .about{
+        display: none;
+    }
+    .about2{
+        display: block;
+        width: 100%;
+        margin-left: 30px;
+        &__text{
+            font-size: 14px;
+            font-weight: 500;
+            padding-left: 20px;
+            border-left: 2px solid var(--gray);
+        }
+    }
+    .buttons{
+        display: none;
+    }
+    .buttons2{
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .subscribe{
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .gotobtn{
+        margin-top: 10px;
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .title{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .skills{
+        margin-top: 40px;
+        &__box{
+            padding: 15px 20px 0px 20px;
+        }
+        &__opt{
+            margin-bottom: 15px;
+        }
+        &__opt_text{
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    }
+    .materials{
+        margin-top: 40px;
+        &__head{
+            font-size: 20px;
+        }
+        &__head_icon{
+            margin-right: 4px;
+        }
+        &__head_red{
+            margin-right: 6px;
+        }
+        &__head_black{
+            margin-right: 6px;
+        }
+        &__head_line{
+            margin: 0px 15px 0px 9px;
+            font-size: 24px;
+        }
+        &__title{
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        &__video{
+            margin-top: 10px;
+        }
+    }
+    .teacher{
+        margin-top: 40px;
+        &__ava{
+            min-width: 180px;
+            max-width: 180px;
+            height: 180px;
+            margin-right: 20px;
+        }
+        &__short{
+            white-space: pre-wrap;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        &__long{
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+    .reviews{
+        display: none;
+    }
+    .reviews2{
+        width: 100%;
+        display: block;
+        margin-top: 40px;
+        &__rating_text{
+            font-size: 40px;
+            margin-right: 10px;
+        }
+        &__count{
+            font-size: 16px;
+            margin-top: -5px;
+        }
+        &__buttons{
+            margin-top: 20px;
+        }
+        &__buttons_more{
+            width: 140px;
+            height: 30px;
+            margin-right: 20px;
+        }
+        &__buttons_add{
+            width: 140px;
+            height: 30px;
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .wrapper{
+        width: calc(100% - 80px);
+        position: relative;
+        left: 40px;
+        margin-top: 20px;
+    }
+    .left{
+        width: 100%;
+    }
+    .about{
+        display: none;
+    }
+    .about2{
+        display: block;
+        width: 100%;
+        margin-left: 30px;
+        &__text{
+            font-size: 12px;
+            font-weight: 500;
+            padding-left: 20px;
+            border-left: 2px solid var(--gray);
+        }
+    }
+    .buttons{
+        display: none;
+    }
+    .buttons2{
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .subscribe{
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .gotobtn{
+        margin-top: 10px;
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .reviews{
+        width: 100%;
+        margin-top: 30px;
+        &__rating{
+            margin-top: -10px;
+        }
+        &__rating_star{
+            width: 30px;
+            height: 30px;
+        }
+        &__rating_text{
+            font-size: 30px;
+        }
+        &__count{
+            font-size: 14px;
+        }
+        &__list{
+            width: 100%;
+        }
+        &__buttons{
+            margin-top: 16px;
+            display: flex;
+        }
+        &__buttons_more{
+            width: 120px;
+            height: 24px;
+            margin-right: 16px;
+            font-size: 12px;
+        }
+        &__buttons_add{
+            width: 120px;
+            height: 24px;
+            margin-right: 16px;
+            font-size: 12px;
+        }
+    }
+    .right{
+        width: 100%;
+    }
+    .name{
+        width: 100%;
+        height: 30px;
+        font-size: 16px;
+    }
+    .title{
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .skills{
+        margin-top: 30px;
+        width: 100%;
+        &__box{
+            border-radius: 5px;
+            padding: 10px 15px 0px 15px;
+        }
+        &__opt{
+            margin-bottom: 10px;
+        }
+        &__opt_text{
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+    .materials{
+        width: 100%;
+        margin-top: 30px;
+        &__head{
+            font-size: 18px;
+        }
+        &__head_icon{
+            width: 30px;
+            height: 30px;
+        }
+        &__head_red{
+            color: #FF3D00;
+            margin-right: 4px;
+        }
+        &__head_black{
+            margin-right: 4px;
+        }
+        &__head_line{
+            margin: 0px 10px 0px 4px;
+            font-size: 20px;
+        }
+        &__title{
+            font-size: 17px;
+            margin-top: 16px;
+        }
+    }
+    .teacher{
+        width: 100%;
+        margin-top: 30px;
+        &__profile{
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+        &__ava{
+            min-width: 25vw;
+            max-width: 25vw;
+            height: 25vw;
+        }
+        &__short{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__long{
+            font-size: 14px;
+            margin-top: 18px;
+            line-height: 18px;
+        }
+    }
+}
+
+
+@media (max-width: 460px) {
+    .wrapper{
+        width: calc(100% - 40px);
+        position: relative;
+        left: 20px;
+        margin-top: 10px;
+        padding-bottom: 60px;
+    }
+    .left{
+        width: 100%;
+    }
+    .image2{
+        min-width: 100px;
+        min-height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        box-shadow: 0px 0px 2px rgb(0, 0, 0, .5);
+    }
+    .about{
+        display: none;
+    }
+    .about2{
+        display: block;
+        width: 100%;
+        margin-left: 10px;
+        &__text{
+            font-size: 10px;
+            font-weight: 500;
+            padding-left: 10px;
+        }
+    }
+    .buttons{
+        display: none;
+    }
+    .buttons2{
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .subscribe{
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .gotobtn{
+        margin-top: 10px;
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .reviews{
+        width: 100%;
+        margin-top: 30px;
+        &__rating{
+            margin-top: -10px;
+        }
+        &__rating_star{
+            width: 30px;
+            height: 30px;
+        }
+        &__rating_text{
+            font-size: 30px;
+        }
+        &__count{
+            font-size: 12px;
+        }
+        &__list{
+            width: 100%;
+        }
+        &__buttons{
+            margin-top: 16px;
+            display: flex;
+        }
+        &__buttons_more{
+            width: 120px;
+            height: 24px;
+            margin-right: 16px;
+            font-size: 12px;
+        }
+        &__buttons_add{
+            width: 120px;
+            height: 24px;
+            margin-right: 16px;
+            font-size: 12px;
+        }
+    }
+    .right{
+        width: 100%;
+    }
+    .name2{
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .title{
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .skills{
+        margin-top: 30px;
+        width: 100%;
+        &__box{
+            border-radius: 5px;
+            padding: 10px 15px 0px 15px;
+        }
+        &__opt{
+            margin-bottom: 12px;
+        }
+        &__opt_text{
+            font-size: 12px;
+            margin-left: 12px;
+        }
+        &__opt_icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .materials{
+        width: 100%;
+        margin-top: 20px;
+        &__head{
+            font-size: 14px;
+        }
+        &__head_icon{
+            width: 26px;
+            height: 26px;
+        }
+        &__head_red{
+            color: #FF3D00;
+            margin-right: 4px;
+        }
+        &__head_black{
+            margin-right: 4px;
+        }
+        &__head_line{
+            margin: 0px 10px 0px 4px;
+            font-size: 20px;
+        }
+        &__title{
+            font-size: 13px;
+            margin-top: 6px;
+        }
+    }
+    .teacher{
+        width: 100%;
+        margin-top: 30px;
+        &__profile{
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+        &__ava{
+            min-width: 25vw;
+            max-width: 25vw;
+            height: 25vw;
+        }
+        &__short{
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &__long{
+            font-size: 12px;
+            margin-top: 18px;
+            line-height: 18px;
+        }
+    }
+}
+
+
+.hide{
+    display: none;
+}
