@@ -229,7 +229,6 @@ export const Homepage = ({...props}: HomepageProps): JSX.Element => {
                 const _list = []
                 let firstList = true
                 if(content){
-                    console.log(content)
                     if(Object.keys(content).length){
                         for(let j = 0; j < resThemes.length; j++){
                             if(typeof content[`cont${j}`] === 'object'){
