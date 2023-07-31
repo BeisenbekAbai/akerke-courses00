@@ -53,7 +53,8 @@ export const ResCard = ({text, image, resid, resTheme, ...props}: ResCardProps):
 
 
     const deleteRes = () => {
-        set(ref(db, `resources/content/${resTheme}/${resid}`), null)
+        console.log(`resources/content/cont${resTheme}/${resid}`)
+        set(ref(db, `resources/content/cont${resTheme}/${resid}`), null)
         deleteObject(sRef(storage, `resources/${resid}`))
     }
 

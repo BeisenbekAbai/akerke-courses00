@@ -52,7 +52,7 @@ export const AddResCard = ({resnum, ...props}: AddResCardProps): JSX.Element => 
             const uimgPlaceRef = sRef(storage, `resources/${resid}`)
             uploadBytes(uimgPlaceRef, image).then(() => {
                 getDownloadURL(uimgPlaceRef).then((url) => {
-                    set(ref(db, `resources/content/${activeres}/${resid}/image`), url)
+                    set(ref(db, `resources/content/cont${activeres}/${resid}/image`), url)
                 })
             })
             // @ts-ignore
@@ -80,12 +80,9 @@ export const AddResCard = ({resnum, ...props}: AddResCardProps): JSX.Element => 
             })
             if(resources.length){
                 //@ts-ignore
-                set(ref(db, `resources/content/${activeres}/${resid}/text`), resources)
-                //@ts-ignore
-                console.log(resources)
+                set(ref(db, `resources/content/cont${activeres}/${resid}/text`), resources)
             } else {
-                set(ref(db, `resources/content/${activeres}/${resid}/text`), `${e.target.resText.value}`)
-                console.log(e.target.resText.value)
+                set(ref(db, `resources/content/cont${activeres}/${resid}/text`), `${e.target.resText.value}`)
             }
             e.target.resImage.value = null
             e.target.resText.value = ''

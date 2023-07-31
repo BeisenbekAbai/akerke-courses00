@@ -215,48 +215,70 @@ export const Homepage = ({...props}: HomepageProps): JSX.Element => {
             //@ts-ignore
             setResThemes(_list)
         })
-        onValue(ref(db, `resources/content`), (data) => {
-            const content = data.val()
-             //@ts-ignore
-            const _list = []
-            let firstList = true
-            if(content){
-                let counter = 0
-                content.forEach((list: any) => {
-                    const _miniList = []
-                    for(let i = 0; i < Object.values(list).length; i++){
-                        _miniList.push(
-                            <ResCard //@ts-ignore
-                                text={Object.values(list)[i].text} image={Object.values(list)[i].image}
-                                resid={Object.keys(list)[i]} resTheme={`${counter}`} key={Object.keys(list)[i]}
-                            />
-                        )
-                    }
-                    if(firstList){
-                        _list.push(
-                            <div className={styles.resources__list} ref={resListRef} key={`${_miniList}`}>
-                                {_miniList}
-                            </div>
-                        )
-                        firstList = false
-                    } else {
-                        _list.push(
-                            <div className={styles.resources__list} key={`${_miniList}`}>{_miniList}</div>
-                        )
-                    }
-                    counter += 1
-                })
-                //@ts-ignore
-                setResList(_list)
-            } else {
-                setResList([])
-            }
-        })
     }, [])
 
     useEffect(() => {
         dispatch(setActiveRes(resCounter))
     }, [resCounter])
+
+    useEffect(() => {
+        if(resThemes.length){
+            onValue(ref(db, `resources/content`), (data) => {
+                const content = data.val()
+                //@ts-ignore
+                const _list = []
+                let firstList = true
+                if(content){
+                    console.log(content)
+                    if(Object.keys(content).length){
+                        for(let j = 0; j < resThemes.length; j++){
+                            if(typeof content[`cont${j}`] === 'object'){
+                                let list = content[`cont${j}`]
+                                const _miniList = []
+                                if(content[`cont${j}`]){
+                                    for(let i = 0; i < Object.values(list).length; i++){
+                                        _miniList.push(
+                                            <ResCard //@ts-ignore
+                                                text={Object.values(list)[i].text} image={Object.values(list)[i].image}
+                                                resid={Object.keys(list)[i]} resTheme={`${j}`} key={Object.keys(list)[i]}
+                                            />
+                                        )
+                                    }
+                                    if(firstList){
+                                        _list.push(
+                                            <div className={styles.resources__list} ref={resListRef} key={`${_miniList}`}>
+                                                {_miniList}
+                                            </div>
+                                        )
+                                        firstList = false
+                                    } else {
+                                        _list.push(
+                                            <div className={styles.resources__list} key={`${_miniList}`}>{_miniList}</div>
+                                        )
+                                    }
+                                }
+                            } else {
+                                if(firstList){
+                                    _list.push(
+                                        <div className={styles.resources__list} ref={resListRef} key={`cont${j}`}/>
+                                    )
+                                    firstList = false
+                                } else {
+                                    _list.push(
+                                        <div className={styles.resources__list} key={`cont${j}`}/>
+                                    )
+                                }
+                            }
+                        }
+                        // @ts-ignore
+                        setResList(_list)
+                    }
+                } else {
+                    setResList([])
+                }
+            })
+        }
+    }, [resThemes])
 
     return(
         <div {...props}>
