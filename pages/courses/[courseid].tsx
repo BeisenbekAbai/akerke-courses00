@@ -6,6 +6,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Provider } from 'react-redux'
+import styles from '@/PageStyle.module.scss'
 
 
 
@@ -40,7 +41,7 @@ const Course = (): JSX.Element => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Provider store={store}>
-                <CourseLayout cid={cid}/>
+                <CourseLayout className={styles.pageWrapper} cid={cid}/>
             </Provider>
         </>
     )

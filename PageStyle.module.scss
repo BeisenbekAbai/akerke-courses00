@@ -1,0 +1,23 @@
+.pageWrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow: overlay;
+}
+.pageWrapper::-webkit-scrollbar {
+	width: 10px;
+}
+.pageWrapper::-webkit-scrollbar-track {
+	background-color: rgb(0, 0, 0, .15)
+}
+.pageWrapper::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 5px;
+}
+
+@media (max-width: 650px) {
+    .pageWrapper::-webkit-scrollbar {
+        display: none;
+    }
+}

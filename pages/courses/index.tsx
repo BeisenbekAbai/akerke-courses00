@@ -3,6 +3,7 @@ import '@/firebase'
 import { setupStore } from '@/store/store'
 import Head from 'next/head'
 import { Provider } from 'react-redux'
+import styles from '@/PageStyle.module.scss'
 
 
 
@@ -17,7 +18,7 @@ const Courses = (): JSX.Element => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Provider store={store}>
-                <CoursesPage/>
+                <CoursesPage className={styles.pageWrapper}/>
             </Provider>
         </>
     )

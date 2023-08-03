@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/store/hooks/redux'
-import styles from './FoodBar.module.scss'
-import { FoodBarProps } from './FoodBar.props'
+import styles from './FootBar.module.scss'
+import { FootBarProps } from './FootBar.props'
 import { CourseIcon, HomeIcon, SubsIcon } from '@/public/Icons'
 import { popupSlice } from '@/store/reducers/PopupSlice'
 import { useEffect, useState } from 'react'
@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 
 
 
-export const FoodBar = ({...props}: FoodBarProps): JSX.Element => {
+export const FootBar = ({...props}: FootBarProps): JSX.Element => {
     const dispatch = useAppDispatch()
     const { setPopupType } = popupSlice.actions
     const { id } = useAppSelector(state => state.UserReducer)

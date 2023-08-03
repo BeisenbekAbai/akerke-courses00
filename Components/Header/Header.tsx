@@ -15,7 +15,7 @@ import { DeleteCourse } from '../DeleteCourse/DeleteCourse'
 import { DeleteVideo } from '../DeleteVideo/DeleteVideo'
 import { BannerPop } from '../BannerPop/BannerPop'
 import { HowGoPop } from '../HowGoPop/HowGoPop'
-import { FoodBar } from '../FoodBar/FoodBar'
+import { FootBar } from '../FootBar/FootBar'
 import { AddResourcesPop } from '../AddResourcesPop/AddResourcesPop'
 import { AddResCard } from '../AddResCard/AddResCard'
 
@@ -96,12 +96,19 @@ export const Header = ({...props}:HeaderProps): JSX.Element => {
         }
     }
 
-    /* Сохраняем выбранный язык */
+    /* Получаем выбранный язык */
     useEffect(() => {
         if(id){
-            set(ref(db, `users/${id}/language`), langtype)
+            onValue(ref(db, `users/${id}/language`), (data) => {
+                dispatch(setLangType(data.val()))
+            })
         }
-    }, [langtype])
+    }, [id])
+
+    /* Сохраняем выбранный язык */
+    const changeLang = (lang: string) => {
+        set(ref(db, `users/${id}/language`), lang)
+    }
     
 
     return(
@@ -113,7 +120,7 @@ export const Header = ({...props}:HeaderProps): JSX.Element => {
                 <DeleteVideo/>
                 <BannerPop/>
                 <HowGoPop/>
-                <FoodBar/>
+                <FootBar/>
                 <AddResourcesPop/>
                 <AddResCard resnum={0}/>
             </div>
@@ -136,9 +143,9 @@ export const Header = ({...props}:HeaderProps): JSX.Element => {
                             <div className={styles.langlist__options_wrapper}>
                                 <div className={cn(styles.langlist__options, {[styles.down1]: opened})}>
                                     <button className={cn(styles.langlist__opt1, {[styles.langlist__active]:langtype=='rus'})} 
-                                        onClick={() => {dispatch(setLangType('rus')); setOpened(false)}}>Русский</button>
+                                        onClick={() => {changeLang('rus'); setOpened(false)}}>Русский</button>
                                     <button className={cn(styles.langlist__opt, {[styles.langlist__active]:langtype=='kz'})} 
-                                        onClick={() => {dispatch(setLangType('kz')); setOpened(false)}}>Қазақ тілі</button>
+                                        onClick={() => {changeLang('kz'); setOpened(false)}}>Қазақ тілі</button>
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Homepage } from '@/Layout/Homepage/Homepage'
 import { Provider } from 'react-redux'
 import { setupStore } from '@/store/store'
+import styles from '@/PageStyle.module.scss'
 
 const store = setupStore()
 
@@ -14,7 +15,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Provider store={store}>
-                <Homepage/>
+                <Homepage className={styles.pageWrapper}/>
             </Provider>
         </>
     )
