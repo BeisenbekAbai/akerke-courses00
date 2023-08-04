@@ -12,6 +12,7 @@ import { langSlice } from '@/store/reducers/LangSlice'
 import { getAuth } from 'firebase/auth'
 import { userSlice } from '@/store/reducers/UserSlice'
 import { getDownloadURL, getStorage, ref as sRef, uploadBytes } from 'firebase/storage'
+import { Footer } from '@/Components/Footer/Footer'
 
 
 /* Функциональный компонент поле ввода с счетчиком */
@@ -202,6 +203,20 @@ export const ProfilePage = ({...props}: ProfilePageProps): JSX.Element => {
         }
     }, [id, userInpImage])
 
+    /* Получаем выбранный язык */
+    useEffect(() => {
+        if(id){
+            onValue(ref(db, `users/${id}/language`), (data) => {
+                dispatch(setLangType(data.val()))
+            })
+        }
+    }, [id])
+
+    /* Сохраняем выбранный язык */
+    const changeLang = (lang: string) => {
+        set(ref(db, `users/${id}/language`), lang)
+    }
+
     return(
         <div {...props}>
             <Header className={styles.header}/>
@@ -261,9 +276,9 @@ export const ProfilePage = ({...props}: ProfilePageProps): JSX.Element => {
                             </button>
                             <div className={styles.lang__list_wrapper}>
                                 <div className={cn(styles.lang__list, {[styles.lang__opened]: opened})}>
-                                    <button onClick={() => {setOpened(false); dispatch(setLangType('rus'))}}
+                                    <button onClick={() => {setOpened(false); changeLang('rus')}}
                                         className={cn(styles.lang__btn, {[styles.lang__btn_active]:langtype=='rus'})}>Русский</button>
-                                    <button onClick={() => {setOpened(false); dispatch(setLangType('kz'))}}
+                                    <button onClick={() => {setOpened(false); changeLang('kz')}}
                                         className={cn(styles.lang__btn2, {[styles.lang__btn_active]:langtype=='kz'})}>Қазақ тілі</button>
                                 </div>
                             </div>
@@ -272,6 +287,7 @@ export const ProfilePage = ({...props}: ProfilePageProps): JSX.Element => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

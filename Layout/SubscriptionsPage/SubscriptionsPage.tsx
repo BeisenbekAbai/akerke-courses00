@@ -8,6 +8,7 @@ import { Search } from '@/Components/Search/Search'
 import { CourseCard } from '@/Components/CourseCard/CourseCard'
 import { Sidebar } from '@/Components/Sidebar/Sidebar'
 import { SubscriptionsPageProps } from './SubscriptionsPage.props'
+import { Footer } from '@/Components/Footer/Footer'
 
 
 
@@ -115,6 +116,7 @@ export const SubscriptionsPage = ({...props}: SubscriptionsPageProps): JSX.Eleme
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

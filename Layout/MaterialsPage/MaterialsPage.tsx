@@ -8,6 +8,7 @@ import cn from 'classnames'
 import { Arrow3Icon, Check2Icon } from '@/public/Icons'
 import { activeLessonSlice } from '@/store/reducers/ActiveLesson'
 import { useAppDispatch, useAppSelector } from '@/store/hooks/redux'
+import { Footer } from '@/Components/Footer/Footer'
 
 
 const Checkbox = ({number, cid}: CheckboxProps): JSX.Element => {
@@ -310,6 +311,7 @@ export const MaterialsPage = ({withHeader=true, withNavbar=true, ...props}: Mate
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

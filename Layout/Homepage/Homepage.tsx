@@ -13,6 +13,7 @@ import cn from 'classnames'
 import { popupSlice } from "@/store/reducers/PopupSlice"
 import { ResCard } from "@/Components/ResCard/ResCard"
 import { activeresSlice } from "@/store/reducers/ActiveRes"
+import { Footer } from "@/Components/Footer/Footer"
 
 
 
@@ -339,6 +340,7 @@ export const Homepage = ({...props}: HomepageProps): JSX.Element => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

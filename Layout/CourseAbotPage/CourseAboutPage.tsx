@@ -8,6 +8,7 @@ import { CourseAboutPageProps } from './CourseAboutPage.props'
 import { CheckIcon, Lampicon, Star2Icon, StarIcon, VideoIcon } from '@/public/Icons'
 import { CommentCard } from '@/Components/CommentCard/CommentCard'
 import { popupSlice } from '@/store/reducers/PopupSlice'
+import { Footer } from '@/Components/Footer/Footer'
 
 
 
@@ -74,18 +75,8 @@ export const CourseAboutPage = ({cid, headerActive=true, ...props}: CourseAboutP
                         )
                         counter += 1
                     })
-                    setSkillList(
-                        //@ts-ignore
-                        <div className={styles.skills}>
-                            <div className={styles.title}>{(langtype=='kz')?"Сіз не үйренесіз":"Чему вы научитесь"}</div>
-                            <div className={styles.skills__box}>
-                                {
-                                    //@ts-ignore
-                                    _list
-                                }
-                            </div>
-                        </div>
-                    )
+                    // @ts-ignore
+                    setSkillList(_list)
                 }
             })
             /* Автоматический верстаем заголовок для "Материалы курса" */
@@ -376,7 +367,12 @@ export const CourseAboutPage = ({cid, headerActive=true, ...props}: CourseAboutP
                         <div className={styles.title}>{(langtype=='kz')?"Бұл курс не туралы?":"Про что этот курс?"}</div>
                         <div className={styles.about__text}>{course?.description}</div>
                     </div>
-                    {skillList}
+                    <div className={styles.skills}>
+                        <div className={styles.title}>{(langtype=='kz')?"Сіз не үйренесіз":"Чему вы научитесь"}</div>
+                        <div className={styles.skills__box}>
+                            {skillList}
+                        </div>
+                    </div>
                     <div className={styles.materials}>
                         <div className={styles.title}>{(langtype=='kz')?"Курс материалдары":"Материалы курса"}</div>
                         <div className={styles.materials__head}>{materials}</div>
@@ -442,6 +438,7 @@ export const CourseAboutPage = ({cid, headerActive=true, ...props}: CourseAboutP
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

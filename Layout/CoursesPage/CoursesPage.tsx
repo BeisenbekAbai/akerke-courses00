@@ -8,6 +8,7 @@ import { CoursesPageProps } from './CoursesPage.props'
 import { Search } from '@/Components/Search/Search'
 import { CourseCard } from '@/Components/CourseCard/CourseCard'
 import { Sidebar } from '@/Components/Sidebar/Sidebar'
+import { Footer } from '@/Components/Footer/Footer'
 
 
 
@@ -175,6 +176,7 @@ export const CoursesPage = ({...props}: CoursesPageProps): JSX.Element => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
